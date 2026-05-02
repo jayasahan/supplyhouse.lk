@@ -64,3 +64,8 @@ Actual prompt: "Redesign LoginView with: liquid-glass-strong card, background gl
 
 The aim 20: [Create user profile page with account management]
 Actual prompt: "Create ProfileView.vue with: user profile header (avatar with initials, name, email, username), tab navigation (overview, orders, settings), overview tab with stats cards (cart items, total, orders) and quick action buttons (view cart, browse products, dashboard), orders tab with empty state, settings tab with account info display and sign out. Add /profile route with requiresAuth meta to router. Wire profile dropdown in NavBar to link to /profile."
+
+
+
+The aim 21: [Debug error in tsconfig.app.json]
+Actual Prompt: "Hey, there is a error showing in "baseUrl": ".", , can you explain it for me? and give me a solution"
