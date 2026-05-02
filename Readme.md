@@ -1,6 +1,7 @@
 # SUPPLYHOUSE — Your Department Store
 
 A modern, responsive single-page application built for the CS3404 GUI Programming mini project.
+Design is inspired by glassmorphism and modern UI/UX designs.
 
 ## Tech Stack
 
