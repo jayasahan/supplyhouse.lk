@@ -12,8 +12,8 @@ defineEmits<{
   close: []
 }>()
 
-const cartStore = useCartStore()
-const { items, totalItems, totalPrice } = storeToRefs(cartStore)
+const cartStore = useCartStore() // Access cart store to get items, total items, and total price
+const { items, totalItems, totalPrice } = storeToRefs(cartStore) // Reactive references for cart items, total items, and total price
 </script>
 
 <template>
