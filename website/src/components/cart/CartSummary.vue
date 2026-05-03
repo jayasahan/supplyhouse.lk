@@ -3,7 +3,7 @@ import { useCartStore } from '@/stores/cartStore'
 import { storeToRefs } from 'pinia'
 import GlassButton from '@/components/ui/GlassButton.vue'
 
-const cartStore = useCartStore()
+const cartStore = useCartStore() // Access cart store to get total items and price
 const { totalItems, totalPrice } = storeToRefs(cartStore)
 </script>
 

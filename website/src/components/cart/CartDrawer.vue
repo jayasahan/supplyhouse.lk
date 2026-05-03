@@ -17,7 +17,7 @@ const { items, totalItems, totalPrice } = storeToRefs(cartStore)
 </script>
 
 <template>
-  <Teleport to="body">
+  <Teleport to="body"> // Render drawer at body level to avoid z-index and overflow issues
     <Transition name="drawer">
       <div v-if="open" class="fixed inset-0 z-50">
         <!-- Backdrop -->

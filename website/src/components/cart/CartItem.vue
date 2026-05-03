@@ -6,7 +6,7 @@ defineProps<{
   item: CartItem
 }>()
 
-const cartStore = useCartStore()
+const cartStore = useCartStore() // Access cart store for updating quantities and removing items
 </script>
 
 <template>
