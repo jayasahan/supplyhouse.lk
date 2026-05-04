@@ -12,10 +12,10 @@ defineEmits<{
   close: []
 }>()
 
-const authStore = useAuthStore()
-const uiStore = useUiStore()
-const { isAuthenticated } = storeToRefs(authStore)
-const { isDarkMode } = storeToRefs(uiStore)
+const authStore = useAuthStore()   // Access auth store to get user info and authentication status
+const uiStore = useUiStore()   // Access UI store to get theme mode and toggle function
+const { isAuthenticated } = storeToRefs(authStore)  // Reactive reference for authentication status
+const { isDarkMode } = storeToRefs(uiStore)  // Reactive reference for dark mode status
 </script>
 
 <template>
@@ -36,13 +36,13 @@ const { isDarkMode } = storeToRefs(uiStore)
           </div>
         </div>
 
-        <RouterLink
+        <RouterLink 
           to="/"
           class="rounded-xl px-4 py-3 text-sm font-medium text-neutral-700 transition-all hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-white/10"
           @click="$emit('close')"
         >
           Shop
-        </RouterLink>
+        </RouterLink>  // Link to shop page, closes menu on click
         <RouterLink
           v-if="isAuthenticated"
           to="/admin"
@@ -66,7 +66,7 @@ const { isDarkMode } = storeToRefs(uiStore)
           @click="$emit('close')"
         >
           Sign In
-        </RouterLink>
+        </RouterLink>    
         <button
           v-else
           class="mt-2 rounded-xl px-4 py-3 text-sm font-medium text-red-600 transition-all hover:bg-red-50 dark:hover:bg-red-900/20 text-left"
@@ -79,7 +79,7 @@ const { isDarkMode } = storeToRefs(uiStore)
   </Transition>
 </template>
 
-<style scoped>
+<style scoped>               
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.3s ease;
@@ -87,6 +87,6 @@ const { isDarkMode } = storeToRefs(uiStore)
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-10px);                
 }
 </style>

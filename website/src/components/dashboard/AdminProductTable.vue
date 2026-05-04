@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Product } from '@/types/product'
+import type { Product } from '@/types/product'    // Import Product type for type-checking props
 
 defineProps<{
   products: Product[]

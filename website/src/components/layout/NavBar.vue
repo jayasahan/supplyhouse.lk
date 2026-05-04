@@ -8,15 +8,15 @@ import { storeToRefs } from 'pinia'
 import Badge from '@/components/ui/Badge.vue'
 import MobileMenu from './MobileMenu.vue'
 
-const cartStore = useCartStore()
-const authStore = useAuthStore()
-const uiStore = useUiStore()
-const { totalItems } = storeToRefs(cartStore)
-const { isAuthenticated } = storeToRefs(authStore)
-const { isDarkMode } = storeToRefs(uiStore)
+const cartStore = useCartStore()   // Access cart store to get total items for badge count
+const authStore = useAuthStore()   // Access auth store to get user info and authentication status
+const uiStore = useUiStore()      // Access UI store to get theme mode and toggle function
+const { totalItems } = storeToRefs(cartStore)     // Reactive reference for total items in cart
+const { isAuthenticated } = storeToRefs(authStore)  // Reactive reference for authentication status
+const { isDarkMode } = storeToRefs(uiStore)  // Reactive reference for dark mode status
 
-const mobileMenuOpen = ref(false)
-const profileOpen = ref(false)
+const mobileMenuOpen = ref(false)     // State to track mobile menu open/close
+const profileOpen = ref(false)      // State to track profile dropdown open/close
 
 defineEmits<{
   toggleCart: []
