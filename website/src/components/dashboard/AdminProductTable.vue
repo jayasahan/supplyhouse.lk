@@ -2,12 +2,12 @@
 import type { Product } from '@/types/product'    // Import Product type for type-checking props
 
 defineProps<{
-  products: Product[]
+  products: Product[]  // Define a prop named 'products' which is an array of Product objects, allowing the component to receive a list of products to display in the table. This prop will be used to render each product's details such as title, category, price, stock, and rating in the table rows.
 }>()
 
 defineEmits<{
-  edit: [product: Product]
-  delete: [id: number]
+  edit: [product: Product]   // Define an event named 'edit' which emits a Product object when a user clicks the edit button for a product. This allows the parent component to listen for this event and handle the editing logic, such as opening an edit form with the product's details pre-filled.
+  delete: [id: number]    // Define an event named 'delete' which emits a number (the product ID) when a user clicks the delete button for a product. This allows the parent component to listen for this event and handle the deletion logic, such as showing a confirmation dialog and then sending a request to delete the product from the database if confirmed.
 }>()
 </script>
 
@@ -26,7 +26,7 @@ defineEmits<{
       </thead>
       <tbody>
         <tr
-          v-for="product in products"
+          v-for="product in products"    
           :key="product.id"
           class="border-b border-neutral-100 transition-colors hover:bg-neutral-50 dark:border-white/5 dark:hover:bg-white/5"
         >

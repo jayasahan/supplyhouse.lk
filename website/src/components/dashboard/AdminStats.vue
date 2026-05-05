@@ -1,6 +1,6 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
+defineProps<{   // Define props for the AdminStats component, which include 'title' (a string representing the title of the statistic), 'value' (a string or number representing the value of the statistic), and 'icon' (a string representing an icon to visually represent the statistic). These props allow the component to be reusable for different types of statistics by passing different values for these props when using the component in a parent component.
+  title: string 
   value: string | number
   icon: string
 }>()
