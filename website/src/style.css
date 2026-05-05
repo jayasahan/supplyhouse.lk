@@ -2,11 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* === SUPPLYHOUSE Design System === */
+/* SUPPLYHOUSE Design Glassmorphism , cool modern UI */
 
-@layer base {
+@layer base {    
   * {
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;  
     -moz-osx-font-smoothing: grayscale;
   }
 
