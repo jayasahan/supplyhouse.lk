@@ -1,11 +1,11 @@
 <script setup lang="ts">
 defineProps<{
-  show: boolean
+  show: boolean   //  Define a prop named 'show' of type boolean, which will be used to control the visibility of the modal. When 'show' is true, the modal will be displayed; when false, it will be hidden. This prop allows the parent component to manage the state of the modal's visibility and trigger it to open or close as needed.
 }>()
 
 defineEmits<{
-  close: []
-}>()
+  close: []   // Define an event named 'close' that can be emitted by the modal component. This event does not carry any payload (indicated by the empty array), and it will be emitted when the user clicks on the backdrop or the close button within the modal. The parent component can listen for this 'close' event to update its state and hide the modal accordingly, allowing for a seamless user experience when interacting with the modal.
+}>()   
 </script>
 
 <template>
